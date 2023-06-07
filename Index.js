@@ -8,7 +8,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 const configuration = new Configuration({
     organisation: 'org-9X1jX5H0QX2X5X1X1X1X1X1',

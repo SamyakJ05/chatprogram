@@ -6,10 +6,10 @@ import './App.css';
 function App() {
   const [message, setMessage] = useState('');
   const [response, setResponse] = useState('');
-
+  const port = process.env.PORT || 3001;
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('http://localhost:3001', {
+    fetch('http://localhost:' + port, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
